@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Building;
+use App\Models\BuildingOwner;
+use App\Models\PropertyManager;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +15,29 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // Create a user with the specified name, email, and password
+        User::factory()->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        //Create data for the BuildingOwner, Building, and PropertyManager models
+        BuildingOwner::factory(50)->create();
+        Building::factory(50)->create();
+
+        $buildingOwners = BuildingOwner::all();
+        $buildings = Building::all();
+
+
+        // Create a random number of PropertyManager records for each BuildingOwner
+        $buildingOwners->each(function ($buildingOwner) use ($buildings) {
+            $numberOfBuildings = rand(0, 3);
+
+            $randomBuildings = $buildings->random($numberOfBuildings);
+
+            $randomBuildings->each(function ($randomBuilding) use ($buildingOwner) {
+                PropertyManager::factory()->create([
+                    'building_owner_id' => $buildingOwner->id,
+                    'building_id' => $randomBuilding->id,
+                ]);
+            });
+        });
     }
 }
