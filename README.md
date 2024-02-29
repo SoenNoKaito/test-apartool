@@ -53,8 +53,13 @@ This repository contains the API for managing buildings, property managers, and 
     ```bash
     php artisan passport:install
     ```
+
+8. Seed the database with sample data:
+    ```bash
+    php artisan db:seed
+    ```
    
-8. Start the local development server:
+9. Start the local development server:
     ```bash
     php artisan serve
     ```
