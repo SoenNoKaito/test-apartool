@@ -7,6 +7,7 @@
 - [Database Setup](#database-setup)
 - [API Endpoints](#api-endpoints)
 - [Authentication](#authentication)
+- [Extra Notes](#extra-notes)
 - [License](#license)
 
 ## Introduction
@@ -88,6 +89,21 @@ A postman collection is included in the repository for testing the API in the `p
 ## Authentication
 
 The API uses Laravel Passport for authentication. To authenticate a user, send a POST request to `/api/login` with the user's email and password. The API will return an access token that should be included in the `Authorization` header for all subsequent requests.
+
+## Extra Notes
+
+Tests are included in the `tests` directory. To run the tests, use the following command:
+```bash
+php artisan test
+```
+
+The phpunit.xml is prepared to work with sqlite in memory, so it is not necessary to have a database to run the tests. However,
+if the test are going to be run with the production database, keep in mind that passport must be re-installed and the database must be seeded after the tests since the seeders are not set to upload passport clients.
+
+```bash 
+php artisan passport:install
+php artisan migrate:refresh --seed
+```
 
 ## License
 
