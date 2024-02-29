@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "015983fa-21bc-4315-a7cf-1a9a3f99d5f7",
+		"name": "ApartoolTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26020039"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all buildings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6IjVjZjNjNGU1NDU1ODg5ZDMxYzUzMjE2OGJjYzNjN2ZlZjQ0NTk0MTdiNGVkNDMwMTA0Y2MzNGFhM2QwOWNiNjAwYjA2OWI5NjQwYmEyZjkwIiwiaWF0IjoxNzA5MTY0MjE1LjgwMTE3MiwibmJmIjoxNzA5MTY0MjE1LjgwMTE3NSwiZXhwIjoxNzQwNzg2NjE1Ljc4MjQ0NSwic3ViIjoiNCIsInNjb3BlcyI6W119.Sib-1IpnbVPTWZs9Ev3zFHu6u13OB0mxkZRzdl8X_5r4rCw5IFCrV39CLCw0EsbYh5ZrVNp2bHjAQciBYLhO7zKdmdVV3YR-wo7GAunVu6qqiizOKa_L6lpNVKf67oHmdzM2JcgnDU509yzf6Vf1bNNjP6qjI08eaCuSRIGE2CxURtXZMjA4o6neUvAMu9cCDkDg7newhkfyaPQGAY5OEfyRYu0XH6QO4NiA9o7IHvRjrQhspJTJB4YHD99yOo8Ujuhq-NO6yuVUiTPnMeypk9AGhrtRzmpoOUU7BibW2cMwl2Q5OCB-90w--SpAndlrx_6tHMoSiGk6i5ezIg4w8W8r-lS83sTBVFbgEAG9FXsoM9N-RWwIJy1cwlekdbNDNAtyL_O5NawDc2EdUyHFjiyshDPAsonzaV8jqR6MYAiQ2G2hS5Uhp18k1OSW8hQD6Ih8gcNcvblxaKlf14_P7KpS__Fy-FrUNzIjWfpnQdCzxat1oqfc3v3ElnGnpPN-7J7gJwyys8kDdV0VTXWtW5T6Iud0tuUMBfB_a1hUjg6KDMJU8O8hv-hdTWgSQ9ZuYS1WOrsGeI5o62aP4VMFyBwYnjIDQk_lQSMyaIHgEO2QzCXvAnOnEuZ353AvCf2xLDfbBp5UlgGJ_h7jFZOiv96QF5cxcbH8RLc4O1hyYPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/buildings/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buildings",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disable an user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6IjVjZjNjNGU1NDU1ODg5ZDMxYzUzMjE2OGJjYzNjN2ZlZjQ0NTk0MTdiNGVkNDMwMTA0Y2MzNGFhM2QwOWNiNjAwYjA2OWI5NjQwYmEyZjkwIiwiaWF0IjoxNzA5MTY0MjE1LjgwMTE3MiwibmJmIjoxNzA5MTY0MjE1LjgwMTE3NSwiZXhwIjoxNzQwNzg2NjE1Ljc4MjQ0NSwic3ViIjoiNCIsInNjb3BlcyI6W119.Sib-1IpnbVPTWZs9Ev3zFHu6u13OB0mxkZRzdl8X_5r4rCw5IFCrV39CLCw0EsbYh5ZrVNp2bHjAQciBYLhO7zKdmdVV3YR-wo7GAunVu6qqiizOKa_L6lpNVKf67oHmdzM2JcgnDU509yzf6Vf1bNNjP6qjI08eaCuSRIGE2CxURtXZMjA4o6neUvAMu9cCDkDg7newhkfyaPQGAY5OEfyRYu0XH6QO4NiA9o7IHvRjrQhspJTJB4YHD99yOo8Ujuhq-NO6yuVUiTPnMeypk9AGhrtRzmpoOUU7BibW2cMwl2Q5OCB-90w--SpAndlrx_6tHMoSiGk6i5ezIg4w8W8r-lS83sTBVFbgEAG9FXsoM9N-RWwIJy1cwlekdbNDNAtyL_O5NawDc2EdUyHFjiyshDPAsonzaV8jqR6MYAiQ2G2hS5Uhp18k1OSW8hQD6Ih8gcNcvblxaKlf14_P7KpS__Fy-FrUNzIjWfpnQdCzxat1oqfc3v3ElnGnpPN-7J7gJwyys8kDdV0VTXWtW5T6Iud0tuUMBfB_a1hUjg6KDMJU8O8hv-hdTWgSQ9ZuYS1WOrsGeI5o62aP4VMFyBwYnjIDQk_lQSMyaIHgEO2QzCXvAnOnEuZ353AvCf2xLDfbBp5UlgGJ_h7jFZOiv96QF5cxcbH8RLc4O1hyYPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/building-owner/5/disable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"building-owner",
+						"5",
+						"disable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all active buildings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6IjVjZjNjNGU1NDU1ODg5ZDMxYzUzMjE2OGJjYzNjN2ZlZjQ0NTk0MTdiNGVkNDMwMTA0Y2MzNGFhM2QwOWNiNjAwYjA2OWI5NjQwYmEyZjkwIiwiaWF0IjoxNzA5MTY0MjE1LjgwMTE3MiwibmJmIjoxNzA5MTY0MjE1LjgwMTE3NSwiZXhwIjoxNzQwNzg2NjE1Ljc4MjQ0NSwic3ViIjoiNCIsInNjb3BlcyI6W119.Sib-1IpnbVPTWZs9Ev3zFHu6u13OB0mxkZRzdl8X_5r4rCw5IFCrV39CLCw0EsbYh5ZrVNp2bHjAQciBYLhO7zKdmdVV3YR-wo7GAunVu6qqiizOKa_L6lpNVKf67oHmdzM2JcgnDU509yzf6Vf1bNNjP6qjI08eaCuSRIGE2CxURtXZMjA4o6neUvAMu9cCDkDg7newhkfyaPQGAY5OEfyRYu0XH6QO4NiA9o7IHvRjrQhspJTJB4YHD99yOo8Ujuhq-NO6yuVUiTPnMeypk9AGhrtRzmpoOUU7BibW2cMwl2Q5OCB-90w--SpAndlrx_6tHMoSiGk6i5ezIg4w8W8r-lS83sTBVFbgEAG9FXsoM9N-RWwIJy1cwlekdbNDNAtyL_O5NawDc2EdUyHFjiyshDPAsonzaV8jqR6MYAiQ2G2hS5Uhp18k1OSW8hQD6Ih8gcNcvblxaKlf14_P7KpS__Fy-FrUNzIjWfpnQdCzxat1oqfc3v3ElnGnpPN-7J7gJwyys8kDdV0VTXWtW5T6Iud0tuUMBfB_a1hUjg6KDMJU8O8hv-hdTWgSQ9ZuYS1WOrsGeI5o62aP4VMFyBwYnjIDQk_lQSMyaIHgEO2QzCXvAnOnEuZ353AvCf2xLDfbBp5UlgGJ_h7jFZOiv96QF5cxcbH8RLc4O1hyYPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"active\":\"1\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/buildings/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buildings",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all inactive buildings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6IjVjZjNjNGU1NDU1ODg5ZDMxYzUzMjE2OGJjYzNjN2ZlZjQ0NTk0MTdiNGVkNDMwMTA0Y2MzNGFhM2QwOWNiNjAwYjA2OWI5NjQwYmEyZjkwIiwiaWF0IjoxNzA5MTY0MjE1LjgwMTE3MiwibmJmIjoxNzA5MTY0MjE1LjgwMTE3NSwiZXhwIjoxNzQwNzg2NjE1Ljc4MjQ0NSwic3ViIjoiNCIsInNjb3BlcyI6W119.Sib-1IpnbVPTWZs9Ev3zFHu6u13OB0mxkZRzdl8X_5r4rCw5IFCrV39CLCw0EsbYh5ZrVNp2bHjAQciBYLhO7zKdmdVV3YR-wo7GAunVu6qqiizOKa_L6lpNVKf67oHmdzM2JcgnDU509yzf6Vf1bNNjP6qjI08eaCuSRIGE2CxURtXZMjA4o6neUvAMu9cCDkDg7newhkfyaPQGAY5OEfyRYu0XH6QO4NiA9o7IHvRjrQhspJTJB4YHD99yOo8Ujuhq-NO6yuVUiTPnMeypk9AGhrtRzmpoOUU7BibW2cMwl2Q5OCB-90w--SpAndlrx_6tHMoSiGk6i5ezIg4w8W8r-lS83sTBVFbgEAG9FXsoM9N-RWwIJy1cwlekdbNDNAtyL_O5NawDc2EdUyHFjiyshDPAsonzaV8jqR6MYAiQ2G2hS5Uhp18k1OSW8hQD6Ih8gcNcvblxaKlf14_P7KpS__Fy-FrUNzIjWfpnQdCzxat1oqfc3v3ElnGnpPN-7J7gJwyys8kDdV0VTXWtW5T6Iud0tuUMBfB_a1hUjg6KDMJU8O8hv-hdTWgSQ9ZuYS1WOrsGeI5o62aP4VMFyBwYnjIDQk_lQSMyaIHgEO2QzCXvAnOnEuZ353AvCf2xLDfbBp5UlgGJ_h7jFZOiv96QF5cxcbH8RLc4O1hyYPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"active\":\"0\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/buildings/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buildings",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all buildings by name using json",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6IjVjZjNjNGU1NDU1ODg5ZDMxYzUzMjE2OGJjYzNjN2ZlZjQ0NTk0MTdiNGVkNDMwMTA0Y2MzNGFhM2QwOWNiNjAwYjA2OWI5NjQwYmEyZjkwIiwiaWF0IjoxNzA5MTY0MjE1LjgwMTE3MiwibmJmIjoxNzA5MTY0MjE1LjgwMTE3NSwiZXhwIjoxNzQwNzg2NjE1Ljc4MjQ0NSwic3ViIjoiNCIsInNjb3BlcyI6W119.Sib-1IpnbVPTWZs9Ev3zFHu6u13OB0mxkZRzdl8X_5r4rCw5IFCrV39CLCw0EsbYh5ZrVNp2bHjAQciBYLhO7zKdmdVV3YR-wo7GAunVu6qqiizOKa_L6lpNVKf67oHmdzM2JcgnDU509yzf6Vf1bNNjP6qjI08eaCuSRIGE2CxURtXZMjA4o6neUvAMu9cCDkDg7newhkfyaPQGAY5OEfyRYu0XH6QO4NiA9o7IHvRjrQhspJTJB4YHD99yOo8Ujuhq-NO6yuVUiTPnMeypk9AGhrtRzmpoOUU7BibW2cMwl2Q5OCB-90w--SpAndlrx_6tHMoSiGk6i5ezIg4w8W8r-lS83sTBVFbgEAG9FXsoM9N-RWwIJy1cwlekdbNDNAtyL_O5NawDc2EdUyHFjiyshDPAsonzaV8jqR6MYAiQ2G2hS5Uhp18k1OSW8hQD6Ih8gcNcvblxaKlf14_P7KpS__Fy-FrUNzIjWfpnQdCzxat1oqfc3v3ElnGnpPN-7J7gJwyys8kDdV0VTXWtW5T6Iud0tuUMBfB_a1hUjg6KDMJU8O8hv-hdTWgSQ9ZuYS1WOrsGeI5o62aP4VMFyBwYnjIDQk_lQSMyaIHgEO2QzCXvAnOnEuZ353AvCf2xLDfbBp5UlgGJ_h7jFZOiv96QF5cxcbH8RLc4O1hyYPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"praesentium\",\r\n    \"active\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/buildings/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buildings",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all buildings by building owner name & last name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6IjVjZjNjNGU1NDU1ODg5ZDMxYzUzMjE2OGJjYzNjN2ZlZjQ0NTk0MTdiNGVkNDMwMTA0Y2MzNGFhM2QwOWNiNjAwYjA2OWI5NjQwYmEyZjkwIiwiaWF0IjoxNzA5MTY0MjE1LjgwMTE3MiwibmJmIjoxNzA5MTY0MjE1LjgwMTE3NSwiZXhwIjoxNzQwNzg2NjE1Ljc4MjQ0NSwic3ViIjoiNCIsInNjb3BlcyI6W119.Sib-1IpnbVPTWZs9Ev3zFHu6u13OB0mxkZRzdl8X_5r4rCw5IFCrV39CLCw0EsbYh5ZrVNp2bHjAQciBYLhO7zKdmdVV3YR-wo7GAunVu6qqiizOKa_L6lpNVKf67oHmdzM2JcgnDU509yzf6Vf1bNNjP6qjI08eaCuSRIGE2CxURtXZMjA4o6neUvAMu9cCDkDg7newhkfyaPQGAY5OEfyRYu0XH6QO4NiA9o7IHvRjrQhspJTJB4YHD99yOo8Ujuhq-NO6yuVUiTPnMeypk9AGhrtRzmpoOUU7BibW2cMwl2Q5OCB-90w--SpAndlrx_6tHMoSiGk6i5ezIg4w8W8r-lS83sTBVFbgEAG9FXsoM9N-RWwIJy1cwlekdbNDNAtyL_O5NawDc2EdUyHFjiyshDPAsonzaV8jqR6MYAiQ2G2hS5Uhp18k1OSW8hQD6Ih8gcNcvblxaKlf14_P7KpS__Fy-FrUNzIjWfpnQdCzxat1oqfc3v3ElnGnpPN-7J7gJwyys8kDdV0VTXWtW5T6Iud0tuUMBfB_a1hUjg6KDMJU8O8hv-hdTWgSQ9ZuYS1WOrsGeI5o62aP4VMFyBwYnjIDQk_lQSMyaIHgEO2QzCXvAnOnEuZ353AvCf2xLDfbBp5UlgGJ_h7jFZOiv96QF5cxcbH8RLc4O1hyYPM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"building_owner_name\": \"Matilde\",\r\n    \"building_owner_last_name\": \"Lowe\",\r\n    \"active\":\"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/buildings/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"buildings",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
